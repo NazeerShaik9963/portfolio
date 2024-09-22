@@ -1,0 +1,89 @@
+.skills {
+  padding: 4rem 2rem;
+  background: white;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.skills h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skills h2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  width: 0;
+  height: 3px;
+  background-color: #ff4b2b;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.skills h2:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill {
+  background-color: #f0f4f8; /* Light gray background */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.skill ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill li {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.skill li:hover {
+  color: #ff4b2b;
+}
+
+@media (min-width: 768px) {
+  .skill-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .skill {
+    flex: 1;
+    min-width: 250px;
+  }
+}
